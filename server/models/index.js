@@ -19,7 +19,7 @@ module.exports = {
           callback(err);
         } else {
           console.log('posted message!' + result);
-          callback(null, result)
+          callback(null, result.insertId)
         }
       })
     } // a function which can be used to insert a message into the database
@@ -43,7 +43,7 @@ module.exports = {
           callback(err);
         } else {
           console.log('added user!' + result);
-          callback(null, result);
+          callback(null, result.insertId);
         }
       })
     }
